@@ -33,7 +33,7 @@ const HomePage = () => {
       <section className="py-16 bg-yellow-400 text-blue-900">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-extrabold text-center mb-8">
-            Throwba
+            Classics
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
