@@ -15,6 +15,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Post from "./Post";
+import AddPost from "./AddPost";
 
 const PostList = () => {
   const [posts, setPosts] = useState([]);
@@ -29,15 +30,18 @@ const PostList = () => {
   };
 
   useEffect(() => {
-    fetchPosts();
+    fetchPosts(); // Fetch posts on initial load
   }, []);
 
   return (
-    <ul>
+    <div>
+      <AddPost fetchPosts={fetchPosts} />
+      <ul>
       {posts.map((post) => (
         <Post key={post.id} post={post} fetchPosts={fetchPosts} />
       ))}
     </ul>
+    </div>
   );
 };
 

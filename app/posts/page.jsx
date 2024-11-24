@@ -48,7 +48,7 @@ const Page = () => {
     <main className="flex flex-col justify-between p-24">
       <h1 className="pb-10 text-4xl font-bold text-yellow-500 ">My Movies Inventory</h1>
       <div>
-        <AddPost />
+        {/* <AddPost /> */}
         <PostList posts={posts} />
       </div>
     </main>

@@ -55,21 +55,20 @@ export const PATCH = async (request, context) => {
       return NextResponse.json({ status: 500, message: error.message });
     }
   };
-  
 
-export const DELETE = async (request, {params}) => {
-    const {id} = params
-    try {
-        const posts = await client.post.delete({
-            where: {
-                id
-            }
-        })
-        return NextResponse.json("Post Deleted",posts)
+export const DELETE = async (request, { params }) => {
+  const { id } = await params;
+  try {
+    const posts = await client.post.delete({
+      where: {
+        id,
+      },
+    });
+    return NextResponse.json("Post Deleted", posts);
 
-    } catch (error) {
-        return NextResponse.error({
-            status: 500
-        }, {message: error.message})
-    }
+  } catch (error) {
+    return NextResponse.error({
+      status: 500,
+    }, { message: error.message });
+  }
 };
