@@ -1,0 +1,8 @@
+Files to update when adding a field:
+ - prisma/schema.prisma 
+ - app/components/AddPost.jsx 
+ - app/components/Modal.jsx --> if needed
+ - app/components/Post.jsx 
+ - app/components/PostList.jsx 
+ - app/api/route.jsx 
+ - app/api/[id]/route.jsx
